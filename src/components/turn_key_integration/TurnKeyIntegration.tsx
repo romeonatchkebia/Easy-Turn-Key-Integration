@@ -73,7 +73,7 @@ const TurnKeyIntegration = () => {
       <section className="flex justify-center w-screen border-b border-border">
         <div
           ref={containerRef}
-          className="flex overflow-x-scroll whitespace-nowrap scrollbar-hide"
+          className="flex overflow-x-scroll whitespace-nowrap scrollbar-hide gap-2"
         >
           {businessTypeBtn.map((item) => (
             <BusinessTypeBtn

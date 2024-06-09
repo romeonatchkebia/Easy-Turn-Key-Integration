@@ -15,9 +15,7 @@ const Body = ({
   const isLargeScreen = width >= 1280;
 
   return isLargeScreen ? (
-    <div
-      className={`flex flex-1 items-center w-full mt-[50px] px-20 h-[299px]`}
-    >
+    <div className="flex flex-1 items-center w-full px-20 mt-16 max-h-[299px]">
       <div className="flex flex-col items-center gap-2 overflow-y-scroll h-72 scrollbar-hide w-full max-w-[280px]">
         {integrationPartners.slice(0, 3).map((item) => (
           <IntegrationCard
