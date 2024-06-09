@@ -44,8 +44,8 @@ const IntegrationCard = ({
         <img src={url} className="w-12 h-12 rounded" />
 
         <div>
-          <h1>{title}</h1>
-          <h2>{subTitle}</h2>
+          <h1 className="font-sf text-base leading-[25.6px]">{title}</h1>
+          <h2 className="font-sf text-xs leading-[19.2px]">{subTitle}</h2>
         </div>
       </div>
 
