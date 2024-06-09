@@ -1,9 +1,7 @@
+import TurnKey from "./components/turn_key_integration/TurnKey";
+
 function App() {
-  return (
-    <div className="bg-blue-300 w-full h-screen flex justify-center items-center">
-      App
-    </div>
-  );
+  return <TurnKey />;
 }
 
 export default App;

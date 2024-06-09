@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "CircularStd";
+  src: url("../assets/fonts/CircularStd-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF-Pro";
+  src: url("../assets/fonts/SF-Pro-Text-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF-Pro";
+  src: url("../assets/fonts/SF-Pro-Text-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF-Pro";
+  src: url("../assets/fonts/SF-Pro-Text-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
