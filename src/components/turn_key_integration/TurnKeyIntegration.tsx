@@ -8,8 +8,8 @@ import xero from "../../assets/logos/xero.png";
 import rippling from "../../assets/logos/rippling.png";
 import Expensify from "../../assets/logos/expensify.svg";
 import Zenefits from "../../assets/logos/zenefits.webp";
-import Profile from "../Profile/Profile";
 import Header from "./Header/Header";
+import Body from "./Body/Body";
 
 const integrationPartners = [
   { id: 1, title: "Sapling", subTitle: "HR Management", url: sapling },
@@ -86,9 +86,14 @@ const TurnKeyIntegration = () => {
         </div>
       </section>
 
-      <Profile />
+      <Body
+        activeButton={activeButton}
+        integrationPartners={integrationPartners}
+        handleIsIntegrationActive={handleIsIntegrationActive}
+        setBusinessTypeBtn={setBusinessTypeBtn}
+      />
 
-      <section className="flex flex-col mt-5 px-[26px] w-full items-center">
+      <section className="flex flex-col mt-5 px-[26px] w-full items-center xl:hidden">
         <div className="flex flex-col items-center gap-2 overflow-y-scroll h-72 scrollbar-hide w-full max-w-screen-md">
           {integrationPartners.map((item) => (
             <IntegrationCard

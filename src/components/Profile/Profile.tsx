@@ -1,8 +1,13 @@
 import profileImg from "../../assets/images/christopher-campbell-rDEOVtE7vOs-unsplash.jpg";
+import { ProfileProps } from "../../types/Profile";
 
-const Profile = () => {
+const Profile = ({ isLargeScreen }: ProfileProps) => {
   return (
-    <section className="flex w-full h-full justify-center items-center px-[26px] pt-16">
+    <section
+      className={`flex w-full h-full justify-center items-center ${
+        isLargeScreen ? "" : "pt-16 px-[26px]"
+      }`}
+    >
       <div className="relative flex w-full h-full justify-center items-center min-w-[323px] min-h-60 max-w-[380px] max-h-[268px] border-2 bg-background border-active rounded-[24px]">
         <img
           src={profileImg}
