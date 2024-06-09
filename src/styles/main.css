@@ -26,10 +26,12 @@
   font-style: normal;
 }
 
-.no-scrollbar::-webkit-scrollbar {
+.scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-.no-scrollbar {
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.scrollbar-hide {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
