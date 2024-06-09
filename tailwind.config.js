@@ -15,6 +15,7 @@ export default {
         passive: "#A39CB5",
         inactiveTitle: "#543E81",
         border: "#E8E6EC",
+        background: "#f3effe",
       },
     },
   },
