@@ -1,12 +1,7 @@
-import TurnKey from "./components/Turn_key_integration/TurnKey";
-import { BusinessTypeProvider } from "./contexts/BusinessTypeContext";
+import TurnKeyIntegration from "./components/Turn_key_integration/TurnKeyIntegration";
 
 function App() {
-  return (
-    <BusinessTypeProvider>
-      <TurnKey />
-    </BusinessTypeProvider>
-  );
+  return <TurnKeyIntegration />;
 }
 
 export default App;

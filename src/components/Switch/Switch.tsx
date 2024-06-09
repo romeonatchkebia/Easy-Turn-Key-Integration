@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { SwitchProps } from "../../types/Switch";
 
-const Switch = ({ isActive, title }: SwitchProps) => {
+const Switch = ({ isActive, onPress }: SwitchProps) => {
   const [active, setActive] = useState(false);
 
   const handleClick = () => {
-    setActive(!active);
+    onPress();
+    setActive((prevActive) => !prevActive);
   };
 
   useEffect(() => {

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import BusinessTypeBtn from "../BusinessTypeBtn/BusinessTypeBtn";
 import profileImg from "../../assets/images/christopher-campbell-rDEOVtE7vOs-unsplash.jpg";
 import IntegrationCard from "../IntegrationCard/IntegrationCard";
+import { BusinessTypeBtnData } from "../../types/BusinessTypeBtn";
 
 const integrationPartners = [
   { id: 1, title: "Sapling", subTitle: "HR Management" },
@@ -12,8 +13,8 @@ const integrationPartners = [
   { id: 6, title: "Zenefits", subTitle: "HR Management" },
 ];
 
-const TurnKey = () => {
-  const [businessTypeBtn, setBusinessTypeBtn] = useState([
+const TurnKeyIntegration = () => {
+  const [businessTypeBtn, setBusinessTypeBtn] = useState<BusinessTypeBtnData>([
     { id: 1, title: "Small Business", partners: ["Zenefits"] },
     { id: 2, title: "Medium Business", partners: ["Sapling", "Workday"] },
     { id: 3, title: "Enterprise", partners: [] },
@@ -121,7 +122,9 @@ const TurnKey = () => {
               key={item.id}
               title={item.title}
               subTitle={item.subTitle}
+              activeButton={activeButton}
               active={handleIsIntegrationActive(item.title)}
+              setBusinessTypeBtn={setBusinessTypeBtn}
             />
           ))}
         </div>
@@ -130,4 +133,4 @@ const TurnKey = () => {
   );
 };
 
-export default TurnKey;
+export default TurnKeyIntegration;
