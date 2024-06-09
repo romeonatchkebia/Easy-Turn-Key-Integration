@@ -3,6 +3,7 @@ import { IntegrationCardProps } from "../../types/IntegrationCard";
 import Switch from "../Switch/Switch";
 
 const IntegrationCard = ({
+  url,
   title,
   subTitle,
   active,
@@ -34,10 +35,18 @@ const IntegrationCard = ({
   };
 
   return (
-    <div className="flex justify-between items-center rounded-xl pl-4 pr-5 py-[18px]">
-      <div>
-        <h1>{title}</h1>
-        <h2>{subTitle}</h2>
+    <div
+      className={`flex justify-between items-center border-2 w-full ${
+        active ? " border-active" : "border-border"
+      }  rounded-xl pl-4 pr-6 py-[18px]`}
+    >
+      <div className="flex gap-2">
+        <img src={url} className="w-12 h-12 rounded" />
+
+        <div>
+          <h1>{title}</h1>
+          <h2>{subTitle}</h2>
+        </div>
       </div>
 
       <Switch isActive={active} onPress={handleSwitchPress} />

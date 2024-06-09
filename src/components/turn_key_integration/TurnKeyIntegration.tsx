@@ -3,14 +3,20 @@ import BusinessTypeBtn from "../BusinessTypeBtn/BusinessTypeBtn";
 import profileImg from "../../assets/images/christopher-campbell-rDEOVtE7vOs-unsplash.jpg";
 import IntegrationCard from "../IntegrationCard/IntegrationCard";
 import { BusinessTypeBtnData } from "../../types/BusinessTypeBtn";
+import sapling from "../../assets/logos/sappling.webp";
+import workday from "../../assets/logos/workday.jpeg";
+import xero from "../../assets/logos/xero.png";
+import rippling from "../../assets/logos/rippling.png";
+import Expensify from "../../assets/logos/expensify.svg";
+import Zenefits from "../../assets/logos/zenefits.webp";
 
 const integrationPartners = [
-  { id: 1, title: "Sapling", subTitle: "HR Management" },
-  { id: 2, title: "Workday", subTitle: "HR Management" },
-  { id: 3, title: "Xero", subTitle: "Employers base" },
-  { id: 4, title: "Rippling", subTitle: "Salary Management" },
-  { id: 5, title: "Expensify", subTitle: "HR Management" },
-  { id: 6, title: "Zenefits", subTitle: "HR Management" },
+  { id: 1, title: "Sapling", subTitle: "HR Management", url: sapling },
+  { id: 2, title: "Workday", subTitle: "HR Management", url: workday },
+  { id: 3, title: "Xero", subTitle: "Employers base", url: xero },
+  { id: 4, title: "Rippling", subTitle: "Salary Management", url: rippling },
+  { id: 5, title: "Expensify", subTitle: "HR Management", url: Expensify },
+  { id: 6, title: "Zenefits", subTitle: "HR Management", url: Zenefits },
 ];
 
 const TurnKeyIntegration = () => {
@@ -61,7 +67,7 @@ const TurnKeyIntegration = () => {
 
   return (
     <div className="h-screen w-screen flex flex-col items-center overflow-y-scroll scrollbar-hide py-12">
-      <section className="flex flex-col mb-5 mx-[26px]">
+      <section className="flex flex-col mb-5 mx-[26px] max-w-screen-md">
         <h1 className="font-circular font-bold text-4xl leading-[43.2px] pb-6 text-text-content text-center">
           Easy Turn-Key Integration
         </h1>
@@ -115,11 +121,12 @@ const TurnKeyIntegration = () => {
         </div>
       </section>
 
-      <section className="mt-5 px-[26px] w-full">
-        <div className="flex flex-col gap-2 overflow-y-scroll h-44 scrollbar-hide  ">
+      <section className="flex flex-col mt-5 px-[26px] w-full items-center">
+        <div className="flex flex-col items-center gap-2 overflow-y-scroll h-72 scrollbar-hide w-full max-w-screen-md">
           {integrationPartners.map((item) => (
             <IntegrationCard
               key={item.id}
+              url={item.url}
               title={item.title}
               subTitle={item.subTitle}
               activeButton={activeButton}
