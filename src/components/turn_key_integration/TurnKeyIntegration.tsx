@@ -6,7 +6,7 @@ import sapling from "../../assets/logos/sappling.webp";
 import workday from "../../assets/logos/workday.jpeg";
 import xero from "../../assets/logos/xero.png";
 import rippling from "../../assets/logos/rippling.png";
-import Expensify from "../../assets/logos/expensify.svg";
+import Expensify from "../../assets/logos/expensify.png";
 import Zenefits from "../../assets/logos/zenefits.webp";
 import Header from "./Header/Header";
 import Body from "./Body/Body";
