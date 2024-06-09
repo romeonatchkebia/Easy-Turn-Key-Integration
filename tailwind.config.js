@@ -14,6 +14,7 @@ export default {
         subTitle: "#5F517D",
         passive: "#A39CB5",
         inactiveTitle: "#543E81",
+        border: "#E8E6EC",
       },
     },
   },

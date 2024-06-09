@@ -8,7 +8,7 @@ const BusinessTypeBtnData = [
 ];
 
 const TurnKey = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const chooseBusinessType = (index: number) => {
@@ -32,7 +32,7 @@ const TurnKey = () => {
 
   return (
     <div className="h-screen w-screen flex flex-col items-center py-12">
-      <section className="flex flex-col bg-green-400 mb-5">
+      <section className="flex flex-col mb-5 mx-[26px]">
         <h1 className="font-circular font-bold text-4xl leading-[43.2px] pb-6 text-text-content text-center">
           Easy Turn-Key Integration
         </h1>
@@ -44,18 +44,20 @@ const TurnKey = () => {
         </p>
       </section>
 
-      <section
-        ref={containerRef}
-        className="flex overflow-x-scroll w-screen bg-yellow-400 whitespace-nowrap scrollbar-hide border-b border-gray-500 gap-6"
-      >
-        {BusinessTypeBtnData.map((item, index) => (
-          <BusinessTypeBtn
-            key={item.id}
-            title={item.title}
-            onPress={() => chooseBusinessType(index)}
-            active={activeIndex === index}
-          />
-        ))}
+      <section className="flex justify-center w-screen border-b border-border">
+        <div
+          ref={containerRef}
+          className="flex overflow-x-scroll whitespace-nowrap scrollbar-hide"
+        >
+          {BusinessTypeBtnData.map((item, index) => (
+            <BusinessTypeBtn
+              key={item.id}
+              title={item.title}
+              onPress={() => chooseBusinessType(index)}
+              active={activeIndex === index}
+            />
+          ))}
+        </div>
       </section>
 
       <section></section>
