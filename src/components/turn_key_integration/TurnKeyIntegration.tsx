@@ -2,22 +2,22 @@ import { useEffect, useRef, useState } from "react";
 import BusinessTypeBtn from "../BusinessTypeBtn/BusinessTypeBtn";
 import IntegrationCard from "../IntegrationCard/IntegrationCard";
 import { BusinessTypeBtnData } from "../../types/BusinessTypeBtn";
-// import sapling from "../../assets/logos/sappling.webp";
-// import workday from "../../assets/logos/workday.jpeg";
-// import xero from "../../assets/logos/xero.png";
-// import rippling from "../../assets/logos/rippling.png";
-// import Expensify from "../../assets/logos/expensify.png";
-// import Zenefits from "../../assets/logos/zenefits.webp";
+import sapling from "../../assets/logos/sappling.webp";
+import workday from "../../assets/logos/workday.jpeg";
+import xero from "../../assets/logos/xero.png";
+import rippling from "../../assets/logos/rippling.png";
+import Expensify from "../../assets/logos/expensify.png";
+import Zenefits from "../../assets/logos/zenefits.webp";
 import Header from "./Header/Header";
 import Body from "./Body/Body";
 
 const integrationPartners = [
-  { id: 1, title: "Sapling", subTitle: "HR Management", url: "" },
-  { id: 2, title: "Workday", subTitle: "HR Management", url: "" },
-  { id: 3, title: "Xero", subTitle: "Employers base", url: "" },
-  { id: 4, title: "Rippling", subTitle: "Salary Management", url: "" },
-  { id: 5, title: "Expensify", subTitle: "HR Management", url: "" },
-  { id: 6, title: "Zenefits", subTitle: "HR Management", url: "" },
+  { id: 1, title: "Sapling", subTitle: "HR Management", url: sapling },
+  { id: 2, title: "Workday", subTitle: "HR Management", url: workday },
+  { id: 3, title: "Xero", subTitle: "Employers base", url: xero },
+  { id: 4, title: "Rippling", subTitle: "Salary Management", url: rippling },
+  { id: 5, title: "Expensify", subTitle: "HR Management", url: Expensify },
+  { id: 6, title: "Zenefits", subTitle: "HR Management", url: Zenefits },
 ];
 
 const TurnKeyIntegration = () => {
